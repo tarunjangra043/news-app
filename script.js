@@ -13,7 +13,7 @@ const logo = document.getElementById("logo");
 
 var newsDataArr = [];
 
-const API_KEY = `c1654660f94f4f5c8deafcfced18a867`;
+const API_KEY = `14a4a461c96c495589db3e38c19ab046`;
 const HEADLINES_NEWS = `https://newsapi.org/v2/top-headlines?country=us&apiKey=`;
 const GENERAL_NEWS = `https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=`;
 const BUSINESS_NEWS = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=`;
@@ -66,7 +66,7 @@ const fetchHeadlines = async () => {
     newsDataArr = myJson.articles;
   } else {
     console.log(response.status, response.statusText);
-    newsdetails.innerHTML = "<h1>No Data Found...</h1>";
+    newsdetails.innerHTML = "<h3>No Data Found...</h3>";
     return;
   }
   displayNews();
@@ -81,7 +81,7 @@ const fetchGeneralNews = async () => {
   } else {
     // handle errors
     console.log(response.status, response.statusText);
-    newsdetails.innerHTML = "<h5>No data found.</h5>";
+    newsdetails.innerHTML = "<h3>No data found.</h3>";
     return;
   }
 
@@ -97,7 +97,7 @@ const fetchBusinessNews = async () => {
   } else {
     // handle errors
     console.log(response.status, response.statusText);
-    newsdetails.innerHTML = "<h5>No data found.</h5>";
+    newsdetails.innerHTML = "<h3>No data found.</h3>";
     return;
   }
 
@@ -114,7 +114,7 @@ const fetchEntertainmentNews = async () => {
   } else {
     // handle errors
     console.log(response.status, response.statusText);
-    newsdetails.innerHTML = "<h5>No data found.</h5>";
+    newsdetails.innerHTML = "<h3>No data found.</h3>";
     return;
   }
 
@@ -132,7 +132,7 @@ const fetchSportsNews = async () => {
   } else {
     // handle errors
     console.log(response.status, response.statusText);
-    newsdetails.innerHTML = "<h5>No data found.</h5>";
+    newsdetails.innerHTML = "<h3>No data found.</h3>";
     return;
   }
 
@@ -148,7 +148,7 @@ const fetchTechnologyNews = async () => {
   } else {
     // handle errors
     console.log(response.status, response.statusText);
-    newsdetails.innerHTML = "<h5>No data found.</h5>";
+    newsdetails.innerHTML = "<h3>No data found.</h3>";
     return;
   }
 
@@ -168,7 +168,7 @@ const fetchQueryNews = async () => {
   } else {
     //error handle
     console.log(response.status, response.statusText);
-    newsdetails.innerHTML = "<h5>No data found.</h5>";
+    newsdetails.innerHTML = "<h3>No data found.</h3>";
     return;
   }
 
