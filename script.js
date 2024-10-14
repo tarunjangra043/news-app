@@ -7,19 +7,19 @@ const businessBtn = document.getElementById("business");
 const sportsBtn = document.getElementById("sports");
 const technologyBtn = document.getElementById("technology");
 const entertainmentBtn = document.getElementById("entertainment");
-const searchQuery = document.getElementById("search-input");
+const newsQuery = document.getElementById("search-input");
 const searchBtn = document.getElementById("search-button");
 const logo = document.getElementById("logo");
 
 var newsDataArr = [];
 
-const API_KEY = `14a4a461c96c495589db3e38c19ab046`;
-const HEADLINES_NEWS = `https://newsapi.org/v2/top-headlines?country=us&apiKey=`;
-const GENERAL_NEWS = `https://newsapi.org/v2/top-headlines?country=us&category=general&apiKey=`;
-const BUSINESS_NEWS = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=`;
-const SPORTS_NEWS = `https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=`;
-const ENTERTAINMENT_NEWS = `https://newsapi.org/v2/top-headlines?country=us&category=entertainment&apiKey=`;
-const TECHNOLOGY_NEWS = `https://newsapi.org/v2/top-headlines?country=us&category=technology&apiKey=`;
+const API_KEY = `a04b4af0c9a6422fa84e33fe3bbc81f4`;
+const HEADLINES_NEWS = `https://newsapi.org/v2/top-headlines?country=in&apiKey=`;
+const GENERAL_NEWS = `https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=`;
+const BUSINESS_NEWS = `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=`;
+const SPORTS_NEWS = `https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=`;
+const ENTERTAINMENT_NEWS = `https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=`;
+const TECHNOLOGY_NEWS = `https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=`;
 const SEARCH_NEWS = `https://newsapi.org/v2/everything?q=`;
 
 window.onload = () => {
@@ -164,6 +164,7 @@ const fetchQueryNews = async () => {
   newsDataArr = [];
   if (response.status >= 200 && response.status < 300) {
     const myJson = await response.json();
+    console.log(newsDataArr);
     newsDataArr = myJson.articles;
   } else {
     //error handle
